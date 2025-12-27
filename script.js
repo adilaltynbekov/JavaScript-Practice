@@ -42,3 +42,18 @@ let value1 = "5" - 2;
 let value2 = "5" + 2;
 console.log(value1);
 console.log(value2);
+
+// if/ else
+// Task 1
+let guestAge = 16;
+
+if (guestAge >= 21) {
+  console.log("Welcome to the club! 🍻");
+} else {
+  let yearsToWait = 21 - guestAge;
+  console.log(
+    `Sorry, come back in ${yearsToWait} ${
+      yearsToWait === 1 ? "year" : "years"
+    }.`
+  );
+}
