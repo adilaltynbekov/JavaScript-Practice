@@ -239,7 +239,6 @@ if (age >= 18) {
 }
 console.log(canVote);
 
-*/
 
 let billValue = Number("100");
 
@@ -255,10 +254,12 @@ console.log(
 let billValue1 = Number("100");
 
 let tip =
-  billValue >= 50 && billValue1 <= 300 ? billValue1 * 0.15 : billValue1 * 0.2;
+billValue >= 50 && billValue1 <= 300 ? billValue1 * 0.15 : billValue1 * 0.2;
 
 console.log(
   `Your bill was ${billValue1}, the tip was ${tip}, and the total value is ${
     billValue1 + tip
   }`
 );
+
+*/
