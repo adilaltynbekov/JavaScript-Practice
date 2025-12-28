@@ -1,3 +1,4 @@
+/*
 // Task 1
 const firstName = "Adil";
 const jobTitle = "Junior Developer";
@@ -258,3 +259,107 @@ console.log(
     billValue1 + tip
   }`
 );
+*/
+
+/* ********************************************************** */
+/* ********************************************************** */
+/* ********************************************************** */
+/* ********************************************************** */
+/* ********************************************************** */
+
+// Functions Practice
+// Task 1
+function describeSystem() {
+  console.log(`System is online and running... 🤖`);
+}
+describeSystem();
+describeSystem();
+describeSystem();
+
+// Task 2
+function calculateTotal(price, tip) {
+  let summary = `The bill is ${price} and the tip is ${tip}.`;
+  return summary;
+}
+const summary1 = calculateTotal(100, 20);
+const summary2 = calculateTotal(50, 5);
+console.log(summary1, summary2);
+
+// Task 3
+function calcAgeInDays(ageInYears) {
+  return ageInYears * 365;
+}
+const ageInDays = calcAgeInDays(20);
+console.log(`I'm approximately ${ageInDays} days old!`);
+
+// Function Declarations vs. Expressions
+// Task 1
+console.log(calculateSquare(5));
+function calculateSquare(number) {
+  return number * number;
+}
+// console.log(calculateCube(5)); // Cannot access 'calculateCube' before initialization
+const calculateCube = function (number) {
+  return number * number * number;
+};
+
+// Task 2
+function getRemainder(a, b) {
+  return a % b;
+}
+
+const calcRemainder = function (a, b) {
+  return a % b;
+};
+console.log(calcRemainder(10, 3));
+
+// Task 3
+const shout = function (shout) {
+  return shout.toUpperCase();
+};
+const anotherShout = shout;
+
+console.log(anotherShout("Hello"));
+
+// Arrow functions
+// Task 1
+const square = (num) => num * num;
+console.log(square(8));
+
+// Task 2
+const greetUser = (firstName, timeOfDay) => `Good ${timeOfDay}, ${firstName}!`;
+console.log(greetUser("Adil", "afternoon"));
+
+// Task 3
+const yearsToCentury = (birthYear) => 100 - (2025 - birthYear);
+console.log(yearsToCentury(2005));
+
+// Functions Calling Other Functions
+// Task 1
+const celsiusToFahrenheit = (celsius) => celsius * (9 / 5) + 32;
+const getWeatherReport = (city, tempCelsius) => {
+  const tempF = celsiusToFahrenheit(tempCelsius);
+  return `The temperature in ${city} is ${tempF} degrees Fahrenheit.`;
+};
+console.log(getWeatherReport("Almaty", 1));
+
+// Task 2
+const checkStock = (items) => items > 0;
+
+const processOrder = (itemName, quantity) =>
+  checkStock(quantity)
+    ? `Order for ${quantity} ${itemName} is processing...`
+    : `Sorry ${itemName} is out of stock.`;
+
+console.log(processOrder("Football", 1));
+
+// Task 3
+const maskCharacter = (char) => "*";
+const protectPassword = (password) => {
+  const p1 = maskCharacter(password[0]);
+  const p2 = maskCharacter(password[1]);
+  const p3 = maskCharacter(password[2]);
+  const p4 = maskCharacter(password[3]);
+  return p1 + p2 + p3 + p4;
+};
+console.log(protectPassword("Adil"));
