@@ -363,3 +363,38 @@ const protectPassword = (password) => {
   return p1 + p2 + p3 + p4;
 };
 console.log(protectPassword("Adil"));
+
+// Reviewing Functions
+// Task 1
+const applyDiscount = (price) => (price >= 50 ? price - 10 : price);
+const calculateFinalPrice = function (rawPrice, taxRate) {
+  const price = applyDiscount(rawPrice);
+  taxMultiplier = taxRate /= 100;
+  const total = price * (1 + taxMultiplier);
+  return total < 0 ? 0 : total;
+};
+console.log(calculateFinalPrice(50, 3));
+
+// Task 2
+const calcAge = (birthYear) => 2026 - birthYear;
+const getProfileSummary = function (birthYear, username) {
+  const age = calcAge(birthYear);
+  return age >= 13
+    ? `User ${username} is ${age} years old.`
+    : `Access Denied: User too young.`;
+};
+console.log(getProfileSummary(2005, "Adil"));
+console.log(getProfileSummary(2014, "Vlad"));
+
+// Task 3
+const isEnergySavingMode = (currentTemp, targetTemp) =>
+  currentTemp - 5 >= targetTemp;
+const checkThermostat = function (currentTemp, targetTemp) {
+  if (isEnergySavingMode(currentTemp, targetTemp)) {
+    return "AC On";
+  } else {
+    return "AC Off";
+  }
+};
+
+console.log(checkThermostat(25, 20));
