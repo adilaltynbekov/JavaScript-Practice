@@ -398,3 +398,28 @@ const checkThermostat = function (currentTemp, targetTemp) {
 };
 
 console.log(checkThermostat(25, 20));
+
+// Introduction to Arrays
+// Task 1
+const teamMembers = ["Mike", "Will", "Lucas", "Dustin"];
+teamMembers[1] = "Alex";
+console.log(teamMembers);
+console.log(teamMembers[2]);
+console.log(teamMembers.length);
+
+// Task 2
+const currentYear = 2025;
+const userProfile = ["Adil", "Altynbekov", currentYear - 2005, teamMembers];
+console.log(userProfile);
+
+// Task 3
+/*
+const prices = [100, 250, 400, 600];
+const applyDiscount = (price) => price * 0.9;
+const discountPrices = [
+  applyDiscount(prices[0]),
+  applyDiscount(prices[1]),
+  applyDiscount(prices[prices.length - 1]),
+];
+console.log(discountPrices);
+*/
