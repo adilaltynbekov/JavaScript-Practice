@@ -385,5 +385,4 @@ const discountPrices = [
   applyDiscount(prices[1]),
   applyDiscount(prices[prices.length - 1]),
 ];
-
 console.log(discountPrices);
