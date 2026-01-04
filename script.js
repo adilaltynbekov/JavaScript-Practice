@@ -423,3 +423,41 @@ const discountPrices = [
 ];
 console.log(discountPrices);
 */
+
+// Task 4
+const guests = ["Alice", "Bob", "Charlie", "David"];
+// guests[guests.indexOf("Bob")] = "Edward";
+guests[1] = "Edward";
+console.log(guests);
+console.log(guests[guests.length - 1]);
+
+// Task 5
+const myProfile = ["Adil", "Almaty", 2005, 2026 - 2005];
+
+// Task 6
+const inventory = ["Laptops", "Mice", "Keyboards"];
+inventory[0] = "Tablets";
+console.log(inventory);
+const totalItems = inventory.length;
+console.log(totalItems);
+
+// Basic Array Operations (Methods)
+// Task 1
+const words = ["Hello", "there", "world"];
+const deletedWord = words.pop();
+console.log(deletedWord);
+
+// Task 2
+const blacklist = ["hacker123", "scammer99", "bad_actor"];
+if (blacklist.includes("hacker123")) {
+  console.log("Access Denied");
+} else {
+  console.log("Welcome!");
+}
+
+// Task 3
+const queue = ["Alice", "Bob", "Charlie"];
+queue.shift();
+queue.push("David");
+console.log(queue.indexOf("Charlie"));
+console.log(queue);
