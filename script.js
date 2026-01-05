@@ -461,3 +461,129 @@ queue.shift();
 queue.push("David");
 console.log(queue.indexOf("Charlie"));
 console.log(queue);
+
+// Introduction to Objects
+// Task 1
+const product = {
+  name: "iPhone",
+  price: 200,
+  isStocked: true,
+  tags: ["electronics", "mobile", "iPhone"],
+  dimensions: {
+    widthPx: 300,
+    heightPx: 550,
+    depthMm: 8,
+  },
+};
+
+// Task 2
+const socialPost = {
+  author: "Adil",
+  content: "Video",
+  likesCount: 0,
+  comments: [],
+};
+
+// Task 3
+const myTesla = {
+  model: "X",
+  batteryLevel: 65,
+  driveMode: "Sport",
+};
+
+// I think to use an object in this situation is better because it describes the object itself like it has a descriptive name and a description itself rather than using an array it would be just an array with just random data without names and so on
+
+// Dot vs. Bracket Notation in JavaScript Objects
+// Task 1
+const userPrefs = {
+  theme: "Dark Mode",
+  language: "English",
+  notifications: "Enabled",
+};
+console.log(userPrefs);
+
+const keyToLookUp = "language";
+
+console.log(userPrefs[keyToLookUp]);
+userPrefs["theme"] = "Light Mode";
+console.log(userPrefs);
+
+// Task 2
+const car = {
+  brand: "Toyota",
+  model: "Camry",
+  year: 2022,
+  accidents: 0,
+};
+
+// const userInput = prompt("What do you want to know about the car?");
+// if (userInput in car) {
+//   console.log(car[userInput]);
+// } else {
+//   console.log("Sorry, that information is not available.");
+// }
+
+// Task 3
+const myPlaylist = {
+  name: "Gym Mix",
+  creator: "Adil",
+  songs: ["Lose Yourself", "Eye of the Tiger", "Power"],
+  stats: {
+    playCount: 150,
+    isPublic: true,
+  },
+};
+console.log(
+  `${myPlaylist["creator"]}'s playlist '${myPlaylist.name}' has ${myPlaylist.songs.length} songs and has been played ${myPlaylist.stats.playCount} times.`
+);
+
+// Objects Methods
+// Task 1
+const fitnessActivity = {
+  type: "Running",
+  steps: 10000,
+  caloriesPerStep: 0.04,
+  calculateCalories: function () {
+    this.totalCalories = this.steps * this.caloriesPerStep;
+  },
+};
+fitnessActivity.calculateCalories();
+console.log(fitnessActivity);
+
+// Task 2
+const account = {
+  owner: "Adil",
+  balance: 100,
+  isLocked: false,
+  withdraw: function (amount) {
+    if (this.isLocked) {
+      return "Transactions Denied: Account Locked";
+    } else if (amount > this.balance) {
+      return "Insufficient funds";
+    } else {
+      this.balance -= amount;
+      return this.balance;
+    }
+  },
+};
+console.log(account.withdraw(50));
+
+// Task 3
+const movie = {
+  title: "Avatar",
+  director: "James Cameron",
+  releaseYear: 2009,
+  rating: 7,
+  isHit: function () {
+    return this.rating >= 8;
+  },
+  getReview: function () {
+    return `In ${this.releaseYear}, ${this.director} released '${
+      this.title
+    }'. It has a ${this.rating}/10 rating.${
+      this.isHit() ? " - Highly Recommended!" : ""
+    }`;
+  },
+};
+console.log(movie.getReview());
+console.log(movie.isHit());
